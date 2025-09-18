@@ -1,6 +1,17 @@
-class King:
-    def __init__(self, x : int, y: int) -> None:
-        self.x = x
-        self.y = y
-        self.can_change = False
-        self.times_moved = 0
+from chess_piece import Chess_Piece
+
+class King(Chess_Piece):
+    def __init__(self, x : int, y : int, team : int) -> None:
+        super().__init__(x, y, team)
+        
+    def can_move(self, board : list, x_destination : int, y_destination : int) -> bool:
+        if board[x_destination][y_destination] != "":
+            return False
+        
+        if abs(self.x - x_destination) > 1:
+            return False
+        
+        if abs(self.y - y_destination) > 1:
+            return False
+        
+        return False

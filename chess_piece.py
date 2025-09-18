@@ -1,9 +1,10 @@
 class Chess_Piece:
-    def __init__(self, x : int, y : int) -> None:
+    def __init__(self, x : int, y : int, team : int) -> None:
         self.x = x
         self.y = y
         self.can_change = False
         self.times_moved = 0
+        self.team = team
     
     def get_x(self):
         return self.x

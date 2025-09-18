@@ -22,3 +22,6 @@ class Chess_Piece:
     
     def get_times_moved(self):
         return self.times_moved
+    
+    def get_team(self):
+        return self.team

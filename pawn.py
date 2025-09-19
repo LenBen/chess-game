@@ -6,8 +6,8 @@ class Pawn(Chess_Piece):
         self.can_change = True
     
     def can_move(self, board : list, x_destination : int, y_destination : int) -> bool:
-        if board[x_destination][y_destination] != "":
-            if self.can_take(x_destination, y_destination):
+        if board[y_destination][x_destination] != "":
+            if self.can_take(board, x_destination, y_destination):
                 return True
             return False
         
@@ -24,7 +24,7 @@ class Pawn(Chess_Piece):
 
     def can_take(self, board : list, x_destination : int, y_destination : int) -> bool:
         if abs(self.x - x_destination) == 1 and abs(self.y - y_destination) == 1 and \
-              self.team != board[x_destination][y_destination].get_team():
+              self.team != board[y_destination][x_destination].get_team():
             return True
         else:
             return False

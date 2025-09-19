@@ -2,7 +2,7 @@ from chess_piece import Chess_Piece
 
 class Pawn(Chess_Piece):
     def __init__(self, x : int, y : int, team : int) -> None:
-        super.__init__(x, y, team)
+        super().__init__(x, y, team)
         self.can_change = True
     
     def can_move(self, board : list, x_destination : int, y_destination : int) -> bool:

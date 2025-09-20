@@ -1,0 +1,8 @@
+from chess_piece import Chess_Piece
+
+class  Queen(Chess_Piece):
+    def __init__(self, x : int, y : int, team : int):
+        super().__init__(x, y, team)
+
+    def can_move(self, board : list, x_destination : int, y_destination : int) -> bool:
+        pass

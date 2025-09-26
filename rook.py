@@ -5,7 +5,7 @@ class Rook(Chess_Piece):
         super().__init__(x, y, team)
 
     def can_move(self, board : list, x_destination : int, y_destination : int) -> bool:
-        if board[x_destination][y_destination] != "":
+        if board[y_destination][x_destination] != "":
             return False
         
         if abs(self.x - x_destination) >= 1 and abs(self.y - y_destination) >= 1 :

@@ -6,6 +6,8 @@ class Rook(Chess_Piece):
 
     def can_move(self, board : list, x_destination : int, y_destination : int) -> bool:
         if board[y_destination][x_destination] != "":
+            if self.can_take(board, x_destination, y_destination):
+                return True
             return False
         
         if abs(self.x - x_destination) >= 1 and abs(self.y - y_destination) >= 1 :

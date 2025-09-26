@@ -6,7 +6,7 @@ class King(Chess_Piece):
         
     def can_move(self, board : list, x_destination : int, y_destination : int) -> bool:
         if board[y_destination][x_destination] != "":
-            if self.can_take(x_destination, y_destination):
+            if self.can_take(board, x_destination, y_destination):
                 return True
             return False
         
